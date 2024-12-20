@@ -1,8 +1,32 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src",
+  "sourceRoot": "apps/learnix-api/src",
   "compilerOptions": {
-    "deleteOutDir": true
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/learnix-api/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/learnix-api",
+  "projects": {
+    "learn-ix": {
+      "type": "application",
+      "root": "apps/learnix-api",
+      "entryFile": "main",
+      "sourceRoot": "apps/learnix-api/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/learnix-api/tsconfig.app.json"
+      }
+    },
+    "learnix-batch": {
+      "type": "application",
+      "root": "apps/learnix-batch",
+      "entryFile": "main",
+      "sourceRoot": "apps/learnix-batch/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/learnix-batch/tsconfig.app.json"
+      }
+    }
   }
 }
