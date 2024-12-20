@@ -3,10 +3,10 @@ import { LearnixBatchService } from './learnix-batch.service';
 
 @Controller()
 export class LearnixBatchController {
-  constructor(private readonly learnixBatchService: LearnixBatchService) {}
+	constructor(private readonly learnixBatchService: LearnixBatchService) {}
 
-  @Get()
-  getHello(): string {
-    return this.learnixBatchService.getHello();
-  }
+	@Get()
+	getHello(): string {
+		return this.learnixBatchService.getHello();
+	}
 }
