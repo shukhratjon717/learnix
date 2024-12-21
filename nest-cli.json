@@ -10,7 +10,7 @@
   "monorepo": true,
   "root": "apps/learnix-api",
   "projects": {
-    "learn-ix": {
+    "learnix": {
       "type": "application",
       "root": "apps/learnix-api",
       "entryFile": "main",
